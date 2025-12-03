@@ -1,3 +1,4 @@
+import 'package:favorite_place/screens/places.dart';
 import 'package:favorite_place/themes/app_themes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -19,30 +20,7 @@ class MyApp extends StatelessWidget {
       theme: AppThemes.lightTheme,
       darkTheme: AppThemes.darkTheme,
       themeMode: ThemeMode.system,
-      home: const HomePage(),
-    );
-  }
-}
-
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              'Hello, world!',
-              style: Theme.of(context).textTheme.headlineLarge,
-            ),
-            Text('What are we going to do now that we are here?',
-            style: Theme.of(context).textTheme.bodyLarge),
-          ],
-        ),
-      ),
+      home:  PlacesScreen(),
     );
   }
 }
